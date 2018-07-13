@@ -4,11 +4,8 @@
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
-
 namespace app\assets;
-
 use yii\web\AssetBundle;
-
 /**
  * Main application asset bundle.
  *
@@ -29,3 +26,5 @@ class AppAsset extends AssetBundle
         'yii\bootstrap\BootstrapAsset',
     ];
 }
+
+

@@ -1,7 +1,12 @@
-<?php
+<?
 namespace app\models;
 class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
 {
+    public $id;
+    public $username;
+    public $password;
+    public $authKey;
+    public $accessToken;
     private static $users = [
         '100' => [
             'id' => '100',
@@ -23,7 +28,6 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      */
     public static function findIdentity($id)
     {
-//    	return User::find()->where(['id' => $id]);
         return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
     }
     /**
@@ -84,4 +88,4 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     {
         return $this->password === $password;
     }
-}
+}?>
